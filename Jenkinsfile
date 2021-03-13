@@ -16,9 +16,8 @@ pipeline{
 			}
 		}
 	*/	
-	
-	    stage('sonar and maven'){
-			parallel{
+	        stage('sonar and maven'){
+		       	parallel{
 				stage('Sonar Report'){
 					steps{
 						withSonarQubeEnv('sonar-7.5') {
